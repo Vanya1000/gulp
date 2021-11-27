@@ -2,7 +2,7 @@
 
 //====================================================================================================
 
-/*
+
 //Burger
 .icon-menu {
 	display: none;
@@ -46,4 +46,56 @@
 		}
 	}
 }
-*/
+
+.header {
+
+		&__menu {
+		}
+}
+.menu {
+	display: flex;
+	justify-content: space-between;
+	
+
+		&__logo {
+			padding: 20px;
+			@media (max-width: $md3+px) {
+				padding: 10px;
+				font-size: 30px;
+			}
+		}
+
+		&__body {
+			@media (max-width: $md3+px) {
+				margin-right: -160px;
+				transition: all 0.5s ease 0s;
+				&._active {
+					margin-right: 0px;
+			}
+			}
+		}
+
+		&__list {
+			& li {
+				padding: 20px;
+				@media (max-width: $md2+px) {
+				padding: 20px 10px 20px 10px;
+			}
+			@media (max-width: $md3+px) {
+				padding: 10px;
+			}
+			}
+			display: flex;
+			justify-content: flex-end;
+			@media (max-width: $md3+px) {
+				flex-direction: column;
+				margin: 40px 40px 0px;
+				align-items: center;
+			}
+		}
+
+		&__link {
+			
+			color: #000;
+		}
+}
